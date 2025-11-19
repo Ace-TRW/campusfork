@@ -30,12 +30,16 @@ const BusinessSelection = () => {
             relative group cursor-pointer rounded-xl border transition-all duration-300 ease-out
             flex flex-col p-5 md:p-8 h-auto md:min-h-[420px]
             ${hoveredCard === 'cashflow' 
-              ? 'bg-[linear-gradient(145deg,#0d1a25,#081018)] border-[#F2C965] shadow-[0_0_40px_-10px_rgba(242,201,101,0.3)] transform -translate-y-1' 
+              ? 'bg-[linear-gradient(145deg,#0d1a25,#081018)] border-[#F2C965] shadow-[0_0_50px_-12px_rgba(242,201,101,0.5)] transform -translate-y-1' 
               : 'bg-[#0d1a25] border-[#2A3441] hover:border-[#F2C965]/40'}
           `}
           onMouseEnter={() => setHoveredCard('cashflow')}
           onMouseLeave={() => setHoveredCard(null)}
         >
+          {/* Top Glow Flare */}
+          <div className={`absolute -top-[1px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#F2C965] to-transparent opacity-0 transition-opacity duration-300 ${hoveredCard === 'cashflow' ? 'opacity-100' : ''}`} />
+          <div className={`absolute -top-[20px] left-1/2 -translate-x-1/2 w-1/2 h-[40px] bg-[#F2C965] blur-[40px] opacity-0 transition-opacity duration-300 ${hoveredCard === 'cashflow' ? 'opacity-20' : ''}`} />
+
           <div className="flex flex-row items-center gap-4 mb-4 md:mb-6">
             <div className={`
               w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border transition-all duration-300
@@ -105,12 +109,16 @@ const BusinessSelection = () => {
             relative group cursor-pointer rounded-xl border transition-all duration-300 ease-out
             flex flex-col p-5 md:p-8 h-auto md:min-h-[420px]
             ${hoveredCard === 'investing' 
-              ? 'bg-[linear-gradient(145deg,#0d1a25,#081018)] border-[#F2C965] shadow-[0_0_40px_-10px_rgba(242,201,101,0.3)] transform -translate-y-1' 
+              ? 'bg-[linear-gradient(145deg,#0d1a25,#081018)] border-[#F2C965] shadow-[0_0_50px_-12px_rgba(242,201,101,0.5)] transform -translate-y-1' 
               : 'bg-[#0d1a25] border-[#2A3441] hover:border-[#F2C965]/40'}
           `}
           onMouseEnter={() => setHoveredCard('investing')}
           onMouseLeave={() => setHoveredCard(null)}
         >
+          {/* Top Glow Flare */}
+          <div className={`absolute -top-[1px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#F2C965] to-transparent opacity-0 transition-opacity duration-300 ${hoveredCard === 'investing' ? 'opacity-100' : ''}`} />
+          <div className={`absolute -top-[20px] left-1/2 -translate-x-1/2 w-1/2 h-[40px] bg-[#F2C965] blur-[40px] opacity-0 transition-opacity duration-300 ${hoveredCard === 'investing' ? 'opacity-20' : ''}`} />
+
           <div className="flex flex-row items-center gap-4 mb-4 md:mb-6">
             <div className={`
               w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border transition-all duration-300
